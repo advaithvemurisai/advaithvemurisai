@@ -1,4 +1,4 @@
-# Hi, I'm Advaith 👋
+# Hi, I'm Advaith
 
 Data analyst in Dallas with 3.5+ years turning ambiguous business questions into predictive models, controlled tests, and self-serve dashboards for sales, marketing, and operations leaders across consulting, manufacturing, and logistics.
 
