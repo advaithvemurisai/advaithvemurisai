@@ -22,6 +22,10 @@ Should a retailer keep sending its marketing e-mail? It takes a 64,000-customer 
 An A/B testing decision workspace. Should a neobank ship instant bank linking? It weighs the lift against revenue and fraud guardrails, checks test validity (power, SRM, novelty effects), and recommends Ship, Don't Ship, Keep Testing, or Don't Trust.
 `Python · Streamlit · Statistics`
 
+**[CinematicLink](https://github.com/advaithvemurisai/filmi-link)** · [play it](https://cinematic-link.vercel.app)
+A passion project from my love of Indian movies: how closely connected is Indian cinema? It's a daily puzzle where you link two films through the actors, directors and composers who made them, built on a graph of 17,879 films across 11 languages from TMDb. Breadth-first search verifies every puzzle and sets par, and a weekly cloud job refreshes the data.
+`React · TypeScript · Python · Graph search · GitHub Actions`
+
 **[Rideshare Pricing Analysis](https://github.com/advaithvemurisai/Analysis-of-Dynamic-Pricing-Methods-employed-by-Rideshare-Companies)**
 Group course project comparing dynamic pricing strategies across Uber and Lyft and their effect on demand.
 `Python · Jupyter`
