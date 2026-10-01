@@ -23,8 +23,8 @@ An A/B testing decision workspace. Should a neobank ship instant bank linking? I
 `Python · Streamlit · Statistics`
 
 **[CinematicLink](https://github.com/advaithvemurisai/filmi-link)** · [play it](https://cinematic-link.vercel.app)
-A passion project from my love of Indian movies: how closely connected is Indian cinema? It's a daily puzzle where you link two films through the actors, directors and composers who made them, built on a graph of 17,879 films across 11 languages from TMDb. Breadth-first search verifies every puzzle and sets par, and a weekly cloud job refreshes the data.
-`React · TypeScript · Python · Graph search · GitHub Actions`
+A passion project from my love of Indian cinema, inspired by [FilmLink](https://www.filmlink.io/): Worldle for movie lovers. Each day you link two films through the actors, directors and composers who made them. It runs on a graph of 17,879 films and 16,101 people across 11 languages from TMDb. A generator scores candidate pairs on endpoint familiarity, shortest-route count and hub dependence (sparse-matrix graph maths), with home-industry dailies for five languages. Accounts run on a serverless function with Upstash Redis, and a weekly GitHub Action refreshes the data without ever changing published puzzles.
+`React · TypeScript · Python · NumPy/SciPy · Vercel · Upstash Redis · GitHub Actions`
 
 **[Rideshare Pricing Analysis](https://github.com/advaithvemurisai/Analysis-of-Dynamic-Pricing-Methods-employed-by-Rideshare-Companies)**
 Group course project comparing dynamic pricing strategies across Uber and Lyft and their effect on demand.
