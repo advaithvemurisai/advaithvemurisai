@@ -20,6 +20,15 @@ Every project below is live, and each answers one business question.
 
 `Python · LightGBM · MinT reconciliation · conformal prediction · PuLP · React · Pyodide · FastAPI`
 
+### [WikiWatch](https://github.com/advaithvemurisai/wikiwatch) · [live dashboard](https://wikiwatch-kappa.vercel.app)
+**Did someone just make a risky edit to our brand's Wikipedia page?** A streaming lakehouse that reads every Wikimedia edit (about 42 a second), checks it against a watchlist of 60 brand, product and competitor pages, and raises alerts for removals, page moves, protection changes, unregistered editors and edit bursts. A three-page dashboard covers alerts, a platform baseline and pipeline health.
+- No lost or duplicated edits across restarts: a live producer kill and resume missed 0 events, and Silver removes the repeats with an insert-only MERGE.
+- Per-edit alerts reached Gold in about 61 seconds at p95 in a scripted scenario, against a 5-minute target.
+- Every pull request replays about 5,000 recorded events through the real pipeline and checks the exact alerts; an independent SQL reconciliation and `EXPLAIN`-verified partition pruning back it up.
+- Runs on AWS in short sessions created and destroyed by GitHub Actions, with no stored keys (OIDC), a $50 budget stop and a nightly destroy.
+
+`Redpanda (Kafka) · Spark Structured Streaming · Apache Iceberg · dbt · Athena · Airflow · Terraform · Next.js · GitHub Actions`
+
 ### [Pursue](https://github.com/advaithvemurisai/gtm-sales-agent) · [live demo](https://gtm-sales-agent.vercel.app)
 **Should your sales team go after this account?** Enter what you sell and a target company. It researches the company across the public web (company facts, technology, hiring and news), then returns a Pursue / Watch / Deprioritize verdict with cited evidence and a next step, in under a minute.
 - A 15-case eval: 73% agreement with expected verdicts, 87% stable across reruns, 100% of claims cited, p50 latency 24s at about $0.22 a run.
@@ -56,6 +65,7 @@ Every project below is live, and each answers one business question.
 | **Optimisation & simulation** | linear programming (PuLP, HiGHS), inventory policy and safety stock, Monte Carlo simulation |
 | **GenAI & NLP** | LLMs, AI agents, RAG, LangGraph, prompt engineering, embeddings, vector search (pgvector), Neo4j, Amazon Bedrock, Anthropic API |
 | **Programming & data** | Python (pandas, NumPy, PySpark), SQL (PostgreSQL, SQL Server, Snowflake), SparkSQL, DAX, TypeScript/React |
-| **Cloud & engineering** | AWS, Azure, Databricks, Delta Lake, Snowflake, FastAPI, REST APIs, dimensional modeling, Vercel, GitHub Actions |
+| **Cloud & engineering** | AWS (S3, Athena, Glue, EC2), Azure, Databricks, Delta Lake, Snowflake, FastAPI, REST APIs, dimensional modeling, Vercel, GitHub Actions |
+| **Data engineering** | Kafka/Redpanda, Spark Structured Streaming, Apache Iceberg, dbt, Airflow, Terraform, Docker |
 | **BI & reporting** | Power BI, Tableau, Excel, Alteryx, SSRS |
 | **Certifications** | Databricks Certified Data Engineer Associate · AWS Certified Cloud Practitioner · Microsoft Azure Data Fundamentals |
