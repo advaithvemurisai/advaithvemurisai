@@ -41,11 +41,6 @@ Every project below is live, and each answers one business question.
 
 `Python · DuckDB · SQL · FastAPI · React · statistics`
 
-### [LiftLab](https://github.com/advaithvemurisai/ab-test-simulator) · [live app](https://ab-test-simulator-gbefknskbhqc9fgythgzks.streamlit.app/)
-**Should a neobank ship instant bank linking?** An A/B testing decision workspace that weighs the lift against revenue and fraud guardrails. It checks test validity (power, sample-ratio mismatch, novelty effects) before recommending Ship, Don't Ship, Keep Testing or Don't Trust.
-
-`Python · Streamlit · Bayesian and frequentist testing`
-
 ### [CinematicLink](https://github.com/advaithvemurisai/filmi-link) · [play it](https://cinematic-link.vercel.app)
 **A passion project:** Wordle for Indian cinema, inspired by [FilmLink](https://www.filmlink.io/). Each day you link two films through the actors, directors and composers who made them.
 - It runs on a graph of about 18,900 films and 17,000 people across 11 languages.
@@ -53,6 +48,11 @@ Every project below is live, and each answers one business question.
 - Accounts run on a serverless function and Redis, and a weekly GitHub Action refreshes the data without changing published puzzles.
 
 `React · TypeScript · NumPy/SciPy · Vercel · Upstash Redis · GitHub Actions`
+
+### [LiftLab](https://github.com/advaithvemurisai/ab-test-simulator) · [live app](https://ab-test-simulator-gbefknskbhqc9fgythgzks.streamlit.app/)
+**Should a neobank ship instant bank linking?** An A/B testing decision workspace that weighs the lift against revenue and fraud guardrails. It checks test validity (power, sample-ratio mismatch, novelty effects) before recommending Ship, Don't Ship, Keep Testing or Don't Trust.
+
+`Python · Streamlit · Bayesian and frequentist testing`
 
 ### More
 - [Rideshare Pricing Analysis](https://github.com/advaithvemurisai/Analysis-of-Dynamic-Pricing-Methods-employed-by-Rideshare-Companies): a group course project comparing dynamic pricing across Uber and Lyft and its effect on demand. `Python · Jupyter`
