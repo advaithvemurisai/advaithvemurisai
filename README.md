@@ -36,10 +36,10 @@ Every project below is live, and each answers one business question.
 
 `React · FastAPI · Anthropic API · structured outputs`
 
-### [RetailLab](https://github.com/advaithvemurisai/retail-ab-lab) · [live app](https://retail-ab-lab-bnwnskexpoqbajnhzqgnkh.streamlit.app/)
+### [RetailLab](https://github.com/advaithvemurisai/retail-ab-lab) · [live app](https://retail-ab-lab.vercel.app)
 **Should a retailer keep sending its marketing e-mail?** It prices a 64,000-customer randomized experiment at real sector margins and returns Ship, Don't Ship, Keep Testing or Don't Trust. Verdict: the e-mail pays, $6.8k contribution against a 48% break-even lift, with the men's e-mail driving most of it.
 
-`Python · DuckDB · SQL · Streamlit · statistics`
+`Python · DuckDB · SQL · FastAPI · React · statistics`
 
 ### [LiftLab](https://github.com/advaithvemurisai/ab-test-simulator) · [live app](https://ab-test-simulator-gbefknskbhqc9fgythgzks.streamlit.app/)
 **Should a neobank ship instant bank linking?** An A/B testing decision workspace that weighs the lift against revenue and fraud guardrails. It checks test validity (power, sample-ratio mismatch, novelty effects) before recommending Ship, Don't Ship, Keep Testing or Don't Trust.
