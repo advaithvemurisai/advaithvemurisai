@@ -37,9 +37,13 @@ Every project below is live, and each answers one business question.
 `React · FastAPI · Anthropic API · structured outputs`
 
 ### [RetailLab](https://github.com/advaithvemurisai/retail-ab-lab) · [live app](https://retail-ab-lab.vercel.app)
-**Should a retailer keep sending its marketing e-mail?** It prices a 64,000-customer randomized experiment at real sector margins and returns Ship, Don't Ship, Keep Testing or Don't Trust. Verdict: the e-mail pays, $6.8k contribution against a 48% break-even lift, with the men's e-mail driving most of it.
+**Should a retailer keep sending its marketing e-mail?** It prices a randomized experiment on 64,000 customers (the Hillstrom e-mail test) at real sector margins and the cost of each send, then returns Ship, Don't Ship, Keep Testing or Don't Trust. Margin, cost and the return hurdle are adjustable, and the verdict updates live.
+- Ship: revenue per customer rose 91% against the 48% needed to break even, for $6.8k contribution with a 1% chance of loss. The men's e-mail beats the women's head to head.
+- 52% of the revenue credited to the e-mail would have come in anyway, so click-through attribution overstates its return about 2×.
+- Before any verdict it checks for a broken split, peeking and segment-slicing, each measured on the data: 10 interim looks at a test with no effect declare a winner 20% of the time.
+- The decision rules exist once, in Python: a FastAPI function on Vercel prices precomputed statistics per request, tested to match the full analysis.
 
-`Python · DuckDB · SQL · FastAPI · React · statistics`
+`Python · SciPy · statsmodels · DuckDB · SQL · FastAPI · React · Vercel`
 
 ### [CinematicLink](https://github.com/advaithvemurisai/filmi-link) · [play it](https://cinematic-link.vercel.app)
 **A passion project:** Wordle for Indian cinema, inspired by [FilmLink](https://www.filmlink.io/). Each day you link two films through the actors, directors and composers who made them.
