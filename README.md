@@ -21,7 +21,7 @@ Every project below is live, and each answers one business question.
 `Python · LightGBM · MinT reconciliation · conformal prediction · PuLP · React · Pyodide · FastAPI`
 
 ### [WikiWatch](https://github.com/advaithvemurisai/wikiwatch) · [live dashboard](https://wikiwatch-kappa.vercel.app)
-**Did someone just make a risky edit to our brand's Wikipedia page?** A streaming lakehouse that reads every Wikimedia edit (about 42 a second), checks it against a watchlist of 60 brand, product and competitor pages, and raises alerts for removals, page moves, protection changes, unregistered editors and edit bursts. A three-page dashboard covers alerts, a platform baseline and pipeline health, and each alert links straight to the change on Wikipedia.
+**Did someone just make a risky edit to our brand's Wikipedia page?** A streaming lakehouse that reads every Wikimedia edit (about 42 a second), checks it against a watchlist of 60 brand, product and competitor pages, and raises alerts for removals, page moves, protection changes, unregistered editors and edit bursts. A three-page dashboard covers alerts, a platform baseline and pipeline health, and each alert links to the change on Wikipedia, or to the page history around it.
 - No lost or duplicated edits across restarts: a live producer kill and resume missed 0 events, and Silver removes the repeats with an insert-only MERGE.
 - Per-edit alerts reached Gold in about 61 seconds at p95 in a scripted scenario, against a 5-minute target.
 - Every pull request replays about 5,000 recorded events through the real pipeline and checks the exact alerts; an independent SQL reconciliation and `EXPLAIN`-verified partition pruning back it up.
