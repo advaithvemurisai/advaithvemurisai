@@ -21,7 +21,7 @@ Every project below is live, and each answers one business question.
 `Python · LightGBM · MinT reconciliation · conformal prediction · PuLP · React · Pyodide · FastAPI`
 
 ### [WikiWatch](https://github.com/advaithvemurisai/wikiwatch) · [live dashboard](https://wikiwatch-kappa.vercel.app)
-**Did someone just make a risky edit to our brand's Wikipedia page?** A streaming lakehouse that reads every Wikimedia edit (about 42 a second), checks it against a watchlist of 60 brand, product and competitor pages, and raises alerts for removals, page moves, protection changes, unregistered editors and edit bursts. A three-page dashboard covers alerts, a platform baseline and pipeline health.
+**Did someone just make a risky edit to our brand's Wikipedia page?** A streaming lakehouse that reads every Wikimedia edit (about 42 a second), checks it against a watchlist of 60 brand, product and competitor pages, and raises alerts for removals, page moves, protection changes, unregistered editors and edit bursts. A three-page dashboard covers alerts, a platform baseline and pipeline health, and each alert links straight to the change on Wikipedia.
 - No lost or duplicated edits across restarts: a live producer kill and resume missed 0 events, and Silver removes the repeats with an insert-only MERGE.
 - Per-edit alerts reached Gold in about 61 seconds at p95 in a scripted scenario, against a 5-minute target.
 - Every pull request replays about 5,000 recorded events through the real pipeline and checks the exact alerts; an independent SQL reconciliation and `EXPLAIN`-verified partition pruning back it up.
@@ -32,8 +32,9 @@ Every project below is live, and each answers one business question.
 
 ### [Pursue](https://github.com/advaithvemurisai/gtm-sales-agent) · [live demo](https://gtm-sales-agent.vercel.app)
 **Should your sales team go after this account?** Enter what you sell and a target company. It researches the company across the public web (company facts, technology, hiring and news), then returns a Pursue / Watch / Deprioritize verdict with cited evidence and a next step, in under a minute.
-- A 15-case eval: 73% agreement with expected verdicts, 87% stable across reruns, 100% of claims cited, p50 latency 24s at about $0.22 a run.
-- Confidence is capped in code by how much evidence is missing.
+- On 17 ground-truth cases (fictional companies with injected evidence, 3 runs each), every decision was acceptable, criterion status was 99.6% correct, and a prompt injection in news text was never followed.
+- Live research on 16 real companies matched verified facts on 99.5% of graded fields, with no facts invented for a fictional company. Building these evals caught three verdict bugs and a funding-stage mapping that had scored 54%.
+- Confidence is capped in code by how much evidence is missing, and every claim cites its source.
 
 `React · FastAPI · Anthropic API · structured outputs`
 
@@ -48,9 +49,10 @@ Every project below is live, and each answers one business question.
 
 ### [CinematicLink](https://github.com/advaithvemurisai/filmi-link) · [play it](https://cinematic-link.vercel.app)
 **A passion project:** Wordle for Indian cinema, inspired by [FilmLink](https://www.filmlink.io/). Each day you link two films through the actors, directors and composers who made them.
-- It runs on a graph of about 18,900 films and 17,000 people across 11 languages.
+- It runs on a graph of about 18,200 films and 16,200 people across 11 languages.
 - A generator scores candidate pairs on familiarity, route count and star dependence using sparse-matrix graph maths, with daily puzzles for five home industries.
-- Accounts run on a serverless function and Redis, and a weekly GitHub Action refreshes the data without changing published puzzles.
+- Difficulty is designed, not assumed: famous films are only 2 or 3 links apart, so the week tightens the number of routes and the weekend changes the rules (No Superstars on Saturday, Crew Call on Sunday). Every puzzle is graded.
+- The first move is playable in about 2 seconds on a budget phone (down from 11.4), and accounts, daily push reminders and a weekly data refresh run on serverless functions, Redis and GitHub Actions.
 
 `React · TypeScript · NumPy/SciPy · Vercel · Upstash Redis · GitHub Actions`
 
