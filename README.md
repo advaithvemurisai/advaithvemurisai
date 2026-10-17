@@ -26,6 +26,7 @@ Every project below is live, and each answers one business question.
 - Per-edit alerts reached Gold in about 61 seconds at p95 in a scripted scenario, against a 5-minute target.
 - Every pull request replays about 5,000 recorded events through the real pipeline and checks the exact alerts; an independent SQL reconciliation and `EXPLAIN`-verified partition pruning back it up.
 - Runs on AWS in short sessions created and destroyed by GitHub Actions, with no stored keys (OIDC), a $50 budget stop and a nightly destroy.
+- A boot-time check on Athena caught what local tests could not: Gold tables lost to a 7-day lifecycle rule (rebuilt from Silver in 34 seconds) and unit tests that failed only on Athena. Meanwhile the dashboard kept serving its last good data.
 
 `Redpanda (Kafka) · Spark Structured Streaming · Apache Iceberg · dbt · Athena · Airflow · Terraform · Next.js · GitHub Actions`
 
